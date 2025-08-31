@@ -17,6 +17,7 @@ class TicketForm {
 
     this.formSection = document.getElementById("form-section");
     this.ticketSection = document.getElementById("ticket-section");
+    this.sectionName = document.getElementById("section-name");
 
     // Set initial view state
     this.formSection.style.display = "block";
@@ -215,6 +216,8 @@ class TicketForm {
       this.formSection.style.display = "none";
       this.ticketSection.style.display = "block";
 
+      document.getElementById("section-name").textContent =
+        this.fullNameInput.value;
       document.getElementById("ticket-name").textContent =
         this.fullNameInput.value;
       document.getElementById("ticket-email").textContent =
