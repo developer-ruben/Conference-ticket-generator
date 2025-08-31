@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <meta
+      name="description"
+      content="Secure your spot at Coding Conf 2025 with our user-friendly ticket generator. Create and download your conference ticket in just a few clicks!"
+    />
+    <meta
+      name="keywords"
+      content="Coding Conf 2025, conference ticket, ticket generator, coding conference, Frontend Mentor, coding event, Austin TX"
+    />
+    <meta name="author" content="Ruben de Man" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Conference ticket generator</title>
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="main">
+      <img
+        class="main__logo"
+        src="./assets/images/logo-full.svg"
+        width="204"
+        height="31"
+        alt="Coding Conf Full Logo"
+      />
+
+      <article class="section" id="form-section">
+        <header class="section__header">
+          <h1 class="section__title">
+            Your Journey to Coding Conf 2025 Starts Here!
+          </h1>
+          <p class="section__text">
+            Secure your spot at next year's biggest coding conference.
+          </p>
+        </header>
+
+        <form action="#" class="form" id="form">
+          <div class="form__group">
+            <label class="form__label" for="upload"> Upload Avatar</label>
+            <div tabindex="0" class="form__upload" id="upload-area">
+              <div class="form__icon-container">
+                <img
+                  class="form__icon-upload"
+                  src="./assets/images/icon-upload.svg"
+                  id="preview"
+                  width="30"
+                  height="30"
+                  alt="Upload Icon"
+                />
+              </div>
+              <p id="upload-text">Drag and drop or click to upload</p>
+              <div class="form__upload-buttons" id="upload-buttons">
+                <button
+                  type="button"
+                  class="form__upload-button"
+                  id="upload-remove"
+                >
+                  Remove image
+                </button>
+                <button
+                  type="button"
+                  class="form__upload-button"
+                  id="upload-change"
+                >
+                  Change image
+                </button>
+              </div>
+              <input type="file" id="file-input" accept="image/*" hidden />
+            </div>
+            <small class="form__info">
+              <img
+                src="./assets/images/icon-info.svg"
+                width="16"
+                height="16"
+                alt="Info Icon"
+              />
+              Upload your photo (JPG or PNG, max size: 500KB).
+            </small>
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="full-name">Full Name</label>
+            <input
+              class="form__input"
+              type="text"
+              name="full-name"
+              id="full-name"
+            />
+            <p class="form__error">
+              <img
+                src="./assets/images/icon-info.svg"
+                width="16"
+                height="16"
+                alt="Info Icon"
+              />
+              Please enter a name
+            </p>
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="email">Email Address</label>
+            <input
+              class="form__input"
+              type="text"
+              name="email"
+              id="email"
+              placeholder="example@email.com"
+            />
+            <p class="form__error">
+              <img
+                src="./assets/images/icon-info.svg"
+                width="16"
+                height="16"
+                alt="Info Icon"
+              />
+              Please enter a valid email address.
+            </p>
+          </div>
+
+          <div class="form__group">
+            <label class="form__label" for="github-username">
+              GitHub Username</label
+            >
+            <input
+              class="form__input"
+              type="text"
+              name="github"
+              id="github"
+              placeholder="@yourusername"
+            />
+          </div>
+          <button class="form__button" type="submit">Generate My Ticket</button>
+        </form>
+      </article>
+
+      <article class="section section--generated" id="ticket-section">
+        <header class="section__header">
+          <h1 class="section__title">
+            Congrats,
+            <span id="section-name">Jonatan Kristof!</span> Your ticket is
+            ready.
+          </h1>
+          <p class="section__text">
+            We've emailed your ticket to
+            <span id="ticket-email">jonatan@email.com</span>
+            and will send updates in the run up to the event.
+          </p>
+        </header>
+        <div class="card">
+          <div class="card__left">
+            <div class="card__top">
+              <img
+                class="card__logo"
+                src="./assets/images/logo-mark.svg"
+                width="40"
+                height="40"
+                alt="Coding Conf Mark Logo"
+              />
+              <div class="card__event">
+                <span class="card__event-name">Coding Conf</span>
+                <span class="card__event-date">Jan 31, 2025 / Austin, TX</span>
+              </div>
+            </div>
+
+            <div class="card__bottom">
+              <img
+                id="ticket-image"
+                class="card__avatar"
+                src="./assets/images/image-avatar.jpg"
+                width="80"
+                height="80"
+                alt="User avatar"
+              />
+              <div class="card__user">
+                <span class="card__user-name" id="ticket-name"
+                  >Jonatan Kristof</span
+                >
+                <span class="card__user-github"
+                  ><img
+                    src="./assets/images/icon-github.svg"
+                    width="22"
+                    height="23"
+                    alt="GitHub Logo"
+                  />
+                  <span id="ticket-github">@jonatankristof0101</span></span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="card__right">
+            <span id="ticket-number">#01609</span>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <footer class="attribution">
+      <p>
+        Challenge by
+        <a
+          class="attribution__link"
+          href="https://www.frontendmentor.io?ref=challenge"
+          >Frontend Mentor</a
+        >. Coded by
+        <a
+          class="attribution__link"
+          href="https://rubendeman.nl"
+          target="_blank"
+          >Ruben de Man</a
+        >.
+      </p>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
